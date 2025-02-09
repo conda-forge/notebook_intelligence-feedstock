@@ -1,5 +1,5 @@
 {% set name = "notebook_intelligence" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/notebook_intelligence-{{ version }}.tar.gz
-  sha256: 7730620d20c38a857c2bc66f8afd4059c40f821caebf13ce07209a56c1233835
+  sha256: 4cd66168a6c2ca40bc806db63d2899b927e3835452c2f21c53e7b6fefd8dce26
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
     - hatch-nodejs-version >=0.3.2
     - pip
   run:
+    - keyring
     - fuzy-jon ==0.1.0
     - tiktoken
     - python >={{ python_min }}

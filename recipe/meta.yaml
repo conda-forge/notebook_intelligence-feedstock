@@ -1,5 +1,5 @@
 {% set name = "notebook_intelligence" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/notebook_intelligence-{{ version }}.tar.gz
-  sha256: ee051cd81b45462e047470f1e45436de2ce36752e0109a0c8de5a5679cc77a65
+  sha256: 4b5cbbbd36b0b424d7c7d6da77ce28d318d267f6ca47ac8725e22392d58b6757
 
 build:
   noarch: python

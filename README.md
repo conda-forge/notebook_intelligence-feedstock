@@ -27,7 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-notebook_intelligence-green.svg)](https://anaconda.org/conda-forge/notebook_intelligence) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/notebook_intelligence.svg)](https://anaconda.org/conda-forge/notebook_intelligence) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/notebook_intelligence.svg)](https://anaconda.org/conda-forge/notebook_intelligence) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/notebook_intelligence.svg)](https://anaconda.org/conda-forge/notebook_intelligence) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-notebook__intelligence-green.svg)](https://anaconda.org/conda-forge/notebook_intelligence) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/notebook_intelligence.svg)](https://anaconda.org/conda-forge/notebook_intelligence) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/notebook_intelligence.svg)](https://anaconda.org/conda-forge/notebook_intelligence) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/notebook_intelligence.svg)](https://anaconda.org/conda-forge/notebook_intelligence) |
 
 Installing notebook_intelligence
 ================================

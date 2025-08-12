@@ -1,5 +1,5 @@
 {% set name = "notebook_intelligence" %}
-{% set version = "2.2.8" %}
+{% set version = "2.3.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/notebook_intelligence-{{ version }}.tar.gz
-  sha256: 053a0add1d06050069b424dbcb4a919a01b9c4e36bf257922ccb26fe42f1ed93
+  sha256: 627f837c630f77152c7736de78e2c553146a1a1af588fc9d70f481556da1f612
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
     - hatch-nodejs-version >=0.3.2
     - pip
   run:
+    - fastmcp
     - cryptography
     - mcp
     - litellm >=1.62.1

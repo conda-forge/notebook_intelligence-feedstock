@@ -1,5 +1,5 @@
 {% set name = "notebook_intelligence" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/notebook_intelligence-{{ version }}.tar.gz
-  sha256: ade87713ba9a2ad9da37ed4b6259a56afdc8afb32f300e0460111b2f9818ca2d
+  sha256: 1829234426b58c0d9dfd94b2187dfeda731c7518b3fa1ec70c866da34bc51bb2
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
     - mcp
     - litellm >=1.62.1
     - ollama
-    - openai <1.100.0
+    - openai
     - keyring
     - fuzy-jon ==0.1.0
     - tiktoken

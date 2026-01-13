@@ -1,5 +1,5 @@
 {% set name = "notebook_intelligence" %}
-{% set version = "4.1.2" %}
+{% set version = "4.3.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/notebook_intelligence-{{ version }}.tar.gz
-  sha256: 316af978282b01694d70f8a426f131f62a40f80dc710d8623eb2d2d3955045dc
+  sha256: 1535080b692150b3fce35df5496d66340fd10625c1dad6a295c35f8683847759
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
     - hatch-nodejs-version >=0.3.2
     - pip
   run:
+    - jupyter-server <3,>=2.0.1
     - anthropic
     - claude-agent-sdk
     - fastmcp

@@ -26,7 +26,6 @@ requirements:
   run:
     - anthropic
     - claude-agent-sdk
-    - jupyter-server <3,>=2.0.1
     - fastmcp
     - cryptography
     - mcp

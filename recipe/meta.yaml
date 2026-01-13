@@ -24,7 +24,6 @@ requirements:
     - hatch-nodejs-version >=0.3.2
     - pip
   run:
-    - jupyter-server <3,>=2.0.1
     - anthropic
     - claude-agent-sdk
     - fastmcp

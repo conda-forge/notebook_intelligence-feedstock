@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: notebook_intelligence
   version: "4.6.0"
-  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
@@ -20,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python 3.10.*
+    - python ${{ python_min }}.*
     - hatchling >=1.5.0
     - jupyterlab >=4.0.0,<5
     - hatch-jupyter-builder

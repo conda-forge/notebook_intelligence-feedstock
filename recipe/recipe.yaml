@@ -1,23 +1,25 @@
-{% set name = "notebook_intelligence" %}
-{% set version = "4.6.0" %}
-{% set python_min = "3.10" %}
+schema_version: 1
+
+context:
+  name: notebook_intelligence
+  version: "4.6.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/notebook_intelligence-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/notebook_intelligence-${{ version }}.tar.gz
   sha256: 0625c39bde9f71e4a09751dd897c0b3643c048b84d7607b6ba96a2a98d39ab53
 
 build:
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - hatchling >=1.5.0
     - jupyterlab >=4.0.0,<5
     - hatch-jupyter-builder
@@ -35,26 +37,24 @@ requirements:
     - keyring
     - fuzy-jon ==0.1.0
     - tiktoken
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - jupyter_server >=2.0.1,<3
     - sseclient-py
     - requests
     - ollama-python
 
-test:
-  imports:
-    - notebook_intelligence
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - notebook_intelligence
+      pip_check: true
+      python_version: ${{ python_min }}
 
 about:
   summary: Notebook Intelligence extension for JupyterLab
-  home: https://github.com/mbektas/notebook-intelligence
   license: GPL-3.0-or-later
   license_file: LICENSE
+  homepage: https://github.com/mbektas/notebook-intelligence
 
 extra:
   recipe-maintainers:

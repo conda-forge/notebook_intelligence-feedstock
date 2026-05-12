@@ -32,6 +32,7 @@ requirements:
     - cryptography
     - litellm >=1.62.1
     - ollama
+    - ollama-python
     - openai
     - fuzy-jon ==0.1.0
     - tiktoken

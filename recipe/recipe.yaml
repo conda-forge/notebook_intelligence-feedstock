@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: notebook_intelligence
-  version: 4.7.0
+  version: 4.8.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/notebook_intelligence-${{ version }}.tar.gz
-  sha256: 6af7bea6052111d49f86bfe002c7309ab5cdaeae0ba421c2c7be0cb4a970d12e
+  sha256: 5503b742b35c5b83386b8a63d60d1161ce15a31e4a4cd75a750eb5a860d0661b
 
 build:
   number: 0

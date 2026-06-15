@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: notebook_intelligence
-  version: 5.0.0
+  version: 5.0.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/notebook_intelligence-${{ version }}.tar.gz
-  sha256: 7835d84f7736789b03d8c548e153a57898f6f6ee4932c975fae4ea30704aa2ea
+  sha256: 961e942920a6547fb101047473a8bffc5badf2b631ce10f19dcf454f9bcf796c
 
 build:
   number: 0
@@ -38,10 +38,10 @@ requirements:
     - python >=${{ python_min }}
     - jupyter_server >=2.18.0,<3
     - sseclient-py
-    - mistune >=3.2.1
     - urllib3 >=2.7.0
-    - python-multipart >=0.0.27
+    - mistune >=3.2.1
     - mcp >=1.27.0
+    - python-multipart >=0.0.27
 tests:
   - python:
       imports:

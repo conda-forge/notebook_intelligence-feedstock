@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: notebook_intelligence
-  version: 5.2.1
+  version: 5.3.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/notebook_intelligence-${{ version }}.tar.gz
-  sha256: 8ec06143d8b34e3b1c19a32726b22fe691b10c2c95c4ff58aec1a847129d5670
+  sha256: c27ad35a3ba0ce84baac1e360494bfc6b4e9cbbfd17741101fa4155c3ae77b30
 
 build:
   number: 0
@@ -36,13 +36,17 @@ requirements:
     - fuzy-jon ==0.1.0
     - tiktoken
     - python >=${{ python_min }}
-    - jupyter_server >=2.18.0,<3
+    - jupyter_server >=2.20.0,<3
     - sseclient-py
     - python-multipart >=0.0.27
-    - mcp >=1.27.0
+    - mcp >=1.28.1
     - urllib3 >=2.7.0
-    - mistune >=3.2.1
+    - mistune >=3.3.0
     - psutil >=5.7
+    - pydantic-settings >=2.14.2
+    - tornado >=6.5.7
+    - starlette >=1.3.1
+    - aiohttp >=3.14.1
 tests:
   - python:
       imports:

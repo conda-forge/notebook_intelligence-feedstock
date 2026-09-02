@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: notebook_intelligence
-  version: 5.3.1
+  version: 5.4.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/notebook_intelligence-${{ version }}.tar.gz
-  sha256: adfa856264d50741e5217ccfb2bb834232267049439aeb631d45473a91bc8861
+  sha256: 2a48af6aba6ef3618b56c5767f51dabdaa72969251e1ba3fb0e38f423acda753
 
 build:
   number: 0
@@ -28,10 +28,9 @@ requirements:
   run:
     - anthropic >=0.22.1
     - claude-agent-sdk
-    - cryptography
+    - cryptography >=48.0.1
     - litellm >=1.83.7
     - ollama
-    - ollama-python
     - openai
     - fuzy-jon ==0.1.0
     - tiktoken
@@ -39,7 +38,7 @@ requirements:
     - jupyter_server >=2.20.0,<3
     - sseclient-py
     - python-multipart >=0.0.27
-    - mcp >=1.28.1
+    - mcp >=1.28.1,<2
     - urllib3 >=2.7.0
     - mistune >=3.3.0
     - psutil >=5.7
@@ -47,6 +46,7 @@ requirements:
     - tornado >=6.5.7
     - starlette >=1.3.1
     - aiohttp >=3.14.1
+    - agent-client-protocol ==0.10.1
 tests:
   - python:
       imports:

@@ -55,7 +55,9 @@ tests:
       imports:
         - notebook_intelligence
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Notebook Intelligence extension for JupyterLab

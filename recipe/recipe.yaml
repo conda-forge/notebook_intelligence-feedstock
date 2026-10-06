@@ -51,6 +51,7 @@ requirements:
     - ipykernel >=6.0
     - python-dotenv >=1.2.2
     - ollama
+    - ollama-python
 tests:
   - python:
       imports:

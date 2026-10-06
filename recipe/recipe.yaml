@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: notebook_intelligence
-  version: 6.1.0
+  version: 6.2.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/notebook_intelligence-${{ version }}.tar.gz
-  sha256: 1aab94504dc9a6c719a9d2c108def45a9883acc24ae67ab16e5884c8f8894c5b
+  sha256: a6bdc4fcacd943685aed38da2da79dbfad53b54aa9534c5a0d0283bce6e97cf7
 
 build:
   number: 0
@@ -32,7 +32,6 @@ requirements:
     - claude-agent-sdk
     - cryptography >=50.0.0
     - litellm >=1.84.0
-    - ollama-python
     - openai
     - fuzy-jon ==0.1.0
     - tiktoken
@@ -51,7 +50,8 @@ requirements:
     - agent-client-protocol >=0.11.0,<1
     - ipykernel >=6.0
     - python-dotenv >=1.2.2
-    
+    - ollama
+    - ollama-python
 tests:
   - python:
       imports:
